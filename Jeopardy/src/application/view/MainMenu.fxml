@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mainPane" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainMenuController">
+   <children>
+      <ImageView fitHeight="181.0" fitWidth="440.0" layoutX="180.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../ImagesUsed/S37-Jeopardy-logo-no-flares-2021-update3.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="213.0" layoutY="400.0" mnemonicParsing="false" onAction="#handlePlay" text="Play ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="505.0" layoutY="400.0" mnemonicParsing="false" onAction="#handleQuit" text="Quit">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="321.0" layoutY="400.0" mnemonicParsing="false" onAction="#handleScores" text="View Scores">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
