@@ -2,6 +2,7 @@ package application.controller;
 
 import java.util.ArrayList;
 
+import application.model.Category;
 import application.model.Jeopardy;
 import application.model.Question;
 import application.model.Team;
@@ -19,9 +20,14 @@ public class JeopardyController {
     public void initialize() {
     	System.out.println("Testing game");
     	Jeopardy test = new Jeopardy();
-    	ArrayList<Question> Qtest = test.readQuestionData();
-    	for(Question question: Qtest) {
-    		System.out.println(question);
+    	ArrayList<Category> categoryList = test.readQuestionData();
+    	
+    	for(Category category: categoryList) {
+    		System.out.println(category);
+    		ArrayList<Question> questionList = category.getQuestions();
+    		for(Question question: questionList) {
+    			System.out.println(question);
+    		}
     	}
     }
     
