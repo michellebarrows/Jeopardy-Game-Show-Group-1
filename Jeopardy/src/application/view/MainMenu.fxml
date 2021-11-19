@@ -1,73 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainPane" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainMenuController">
+<AnchorPane fx:id="mainPane" prefHeight="700.0" prefWidth="1035.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainMenuController">
    <children>
-      <ImageView fitHeight="181.0" fitWidth="440.0" layoutX="180.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="764.0" fitWidth="1035.0" pickOnBounds="true">
          <image>
-            <Image url="@../../../images/mainlogo.png" />
+            <Image url="@../../../images/mainscreenbackground.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="213.0" layoutY="600.0" mnemonicParsing="false" onAction="#handlePlay" text="Play ">
+      <Button layoutX="428.0" layoutY="601.0" mnemonicParsing="false" onAction="#handlePlay" prefHeight="5.0" prefWidth="180.0" style="-fx-text-fill: black; -fx-background-color: indigo;" text="PLAY">
          <font>
-            <Font size="24.0" />
+            <Font name="Trebuchet MS Bold" size="32.0" />
          </font>
+         <effect>
+            <DropShadow height="44.45" radius="26.855" spread="0.78" width="64.97">
+               <color>
+                  <Color opacity="0.7878788113594055" />
+               </color>
+            </DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <Button layoutX="505.0" layoutY="600.0" mnemonicParsing="false" onAction="#handleQuit" text="Quit">
+      <Button layoutX="520.0" layoutY="681.0" mnemonicParsing="false" onAction="#handleQuit" prefHeight="22.0" prefWidth="159.0" style="-fx-background-color: slategrey; -fx-text-fill: black;" text="Quit" textFill="#27142c">
          <font>
-            <Font size="24.0" />
+            <Font name="Trebuchet MS Bold" size="23.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <Button layoutX="321.0" layoutY="600.0" mnemonicParsing="false" onAction="#handleScores" text="View Scores">
+      <Button layoutX="349.0" layoutY="681.0" mnemonicParsing="false" onAction="#handleScores" style="-fx-background-color: slategrey; -fx-text-fill: black;" text="View Scores" textFill="#27142c">
          <font>
-            <Font size="24.0" />
+            <Font name="Trebuchet MS Bold" size="23.0" />
          </font>
+         <effect>
+            <DropShadow height="75.225" radius="36.74625" width="73.76" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <TextField fx:id="team1NameField" alignment="CENTER" layoutX="90.0" layoutY="337.0" prefHeight="70.0" prefWidth="300.0" promptText="Enter team name...">
+      <TextField fx:id="team1NameField" alignment="TOP_LEFT" layoutX="177.0" layoutY="459.0" prefHeight="70.0" prefWidth="300.0" promptText="Enter team name..." style="-fx-background-color: black; -fx-border-color: indigo; -fx-border-width: 3; -fx-text-fill: white;">
          <font>
-            <Font name="Arial Rounded MT Bold" size="21.0" />
+            <Font name="Ink Free" size="27.0" />
+         </font>
+         <effect>
+            <DropShadow spread="0.51" />
+         </effect>
+      </TextField>
+      <TextField fx:id="team2NameField" alignment="TOP_LEFT" layoutX="559.0" layoutY="459.0" prefHeight="70.0" prefWidth="300.0" promptText="Enter team name..." style="-fx-background-color: black; -fx-border-color: indigo; -fx-border-width: 3; -fx-text-fill: white;">
+         <font>
+            <Font name="Ink Free" size="27.0" />
+         </font>
+         <effect>
+            <DropShadow spread="0.51" />
+         </effect>
+      </TextField>
+      <TextField alignment="CENTER" editable="false" layoutX="477.0" layoutY="459.0" prefHeight="70.0" prefWidth="82.0" style="-fx-background-color: transparent; -fx-text-fill: grey;" text="VS">
+         <font>
+            <Font name="Impact" size="33.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" offsetX="2.0" spread="0.6" />
+         </effect>
+      </TextField>
+      <TextField fx:id="errorMessage" alignment="CENTER" editable="false" layoutX="250.0" layoutY="522.0" opacity="0.54" prefHeight="70.0" prefWidth="536.0" style="-fx-background-color: transparent; -fx-text-fill: white;">
+         <font>
+            <Font name="Trebuchet MS Bold" size="19.0" />
          </font>
       </TextField>
-      <TextField fx:id="team2NameField" alignment="CENTER" layoutX="410.0" layoutY="337.0" prefHeight="70.0" prefWidth="300.0" promptText="Enter team name...">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="21.0" />
-         </font>
-      </TextField>
-      <ImageView fitHeight="151.0" fitWidth="218.0" layoutX="124.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="399.0" fitWidth="410.0" layoutX="321.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../images/team1mascot.jpg" />
+            <Image url="@../../../images/planet.gif" />
          </image>
+         <effect>
+            <DropShadow height="32.72" radius="16.5925" spread="0.73" width="35.65">
+               <color>
+                  <Color opacity="0.5411255359649658" />
+               </color>
+            </DropShadow>
+         </effect>
       </ImageView>
-      <ImageView fitHeight="173.0" fitWidth="288.0" layoutX="416.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/team2mascot.png" />
-         </image>
-      </ImageView>
-      <TextField alignment="CENTER" editable="false" layoutX="360.0" layoutY="478.0" prefHeight="70.0" prefWidth="82.0" style="-fx-background-color: transparent;" text="VS">
-         <font>
-            <Font name="Trebuchet MS Bold Italic" size="33.0" />
-         </font>
-      </TextField>
-      <TextField alignment="CENTER" editable="false" layoutX="148.0" layoutY="282.0" prefHeight="70.0" prefWidth="167.0" style="-fx-background-color: transparent;" text="Team 1">
-         <font>
-            <Font name="Trebuchet MS Bold Italic" size="28.0" />
-         </font>
-      </TextField>
-      <TextField alignment="CENTER" editable="false" layoutX="452.0" layoutY="282.0" prefHeight="70.0" prefWidth="216.0" style="-fx-background-color: transparent;" text="Team 2">
-         <font>
-            <Font name="Trebuchet MS Bold Italic" size="28.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="errorMessage" alignment="CENTER" editable="false" layoutX="142.0" layoutY="636.0" prefHeight="70.0" prefWidth="536.0" style="-fx-background-color: transparent; -fx-text-fill: darkred;">
-         <font>
-            <Font name="Trebuchet MS Bold Italic" size="19.0" />
-         </font>
-      </TextField>
    </children>
 </AnchorPane>
