@@ -10,7 +10,6 @@ import java.util.ArrayList;
 
 public class Jeopardy {
 	
-	
 	//calls on readQuestionsFromFile to read a list of questions and returns a list of them
 	public ArrayList<Category> readQuestionData(){
 		ArrayList<Category> categories = new ArrayList<>(); 
