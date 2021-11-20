@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainPane" prefHeight="700.0" prefWidth="1035.0" style="-fx-background-color: navy;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.JeopardyController">
+<AnchorPane fx:id="mainPane" prefHeight="700.0" prefWidth="1035.0" style="-fx-background-color: navy;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.JeopardyController">
    <effect>
       <ColorAdjust saturation="-0.24" />
    </effect>
