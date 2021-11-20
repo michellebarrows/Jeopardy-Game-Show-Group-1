@@ -8,7 +8,6 @@ public class Category {
 	private ArrayList<Question> questions;
 	
 	public Category(String name, ArrayList<Question> questions) {
-		super();
 		this.name = name;
 		this.questions = questions;
 	}
@@ -32,10 +31,5 @@ public class Category {
 	public String toString() {
 		return "Category: " + getName() + "\n";
 	}
-	
-	
-	
-	
-
 }
 

@@ -33,16 +33,15 @@ public class JeopardyController {
     Team team2;
     
     public void initialize() {
+    	
+    	TextField[] categoryTextFields = {category0, category1, category2, category3, category4};
+    	
     	System.out.println("Testing game");
     	Jeopardy test = new Jeopardy();
     	ArrayList<Category> categoryList = test.readQuestionData();
     	
-    	for(Category category: categoryList) {
-    		System.out.println(category);
-    		ArrayList<Question> questionList = category.getQuestions();
-    		for(Question question: questionList) {
-    			System.out.println(question);
-    		}
+    	for(int i = 0; i < categoryTextFields.length; i++) {
+    		categoryTextFields[i].setText(categoryList.get(i).getName());
     	}
     	
     	initializeButtons();
@@ -61,5 +60,4 @@ public class JeopardyController {
     {
     	
     }
-
 }
