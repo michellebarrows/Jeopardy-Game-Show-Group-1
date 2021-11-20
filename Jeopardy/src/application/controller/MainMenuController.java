@@ -47,7 +47,7 @@ public class MainMenuController {
 			mainPane = loader.load();
 			
 			JeopardyController control = loader.getController();
-			control.setData(team1, team2);
+			control.setTeams(team1, team2, null);
 			
 	        Scene scene = new Scene(mainPane);
 	        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
