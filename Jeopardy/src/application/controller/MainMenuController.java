@@ -14,6 +14,10 @@ import javafx.scene.control.TextField;
 
 public class MainMenuController {
 
+	///////////////////////
+	/// FXML Variables ///
+	/////////////////////
+	
     @FXML
     private AnchorPane mainPane;
     @FXML
@@ -22,6 +26,10 @@ public class MainMenuController {
     private TextField team2NameField;
     @FXML
     private TextField errorMessage;
+    
+	//////////////////////
+	/// FXML Handlers ///
+	/////////////////////
     
     @FXML
     void handlePlay(ActionEvent event) 
@@ -47,7 +55,7 @@ public class MainMenuController {
 			mainPane = loader.load();
 			
 			JeopardyController control = loader.getController();
-			control.setTeams(team1, team2, null);
+			control.updateGame(team1, team2, null);
 			
 	        Scene scene = new Scene(mainPane);
 	        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();

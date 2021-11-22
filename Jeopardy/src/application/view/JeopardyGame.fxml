@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainPane" prefHeight="700.0" prefWidth="1035.0" style="-fx-background-color: navy;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.JeopardyController">
+<AnchorPane fx:id="mainPane" prefHeight="700.0" prefWidth="1035.0" style="-fx-background-color: navy;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.JeopardyController">
    <effect>
       <ColorAdjust saturation="-0.24" />
    </effect>
@@ -24,7 +24,7 @@
          </image>
       </ImageView>
       <AnchorPane layoutX="192.0" layoutY="184.0" />
-      <Button fx:id="btn10" layoutX="327.0" layoutY="177.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="48.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$100" textAlignment="CENTER">
+      <Button fx:id="btn10" layoutX="327.0" layoutY="177.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="48.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$100" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -39,7 +39,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn20" layoutX="462.0" layoutY="177.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="48.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$100" textAlignment="CENTER">
+      <Button fx:id="btn20" layoutX="462.0" layoutY="177.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="48.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$100" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -54,7 +54,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn30" layoutX="592.0" layoutY="177.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="48.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$100" textAlignment="CENTER">
+      <Button fx:id="btn30" layoutX="592.0" layoutY="177.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="48.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$100" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -69,7 +69,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn40" layoutX="726.0" layoutY="177.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="48.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$100" textAlignment="CENTER">
+      <Button fx:id="btn40" layoutX="726.0" layoutY="177.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="48.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$100" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -84,7 +84,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn00" layoutX="192.0" layoutY="177.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="48.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$100" textAlignment="CENTER">
+      <Button fx:id="btn00" layoutX="192.0" layoutY="177.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="48.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$100" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -99,7 +99,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn01" layoutX="188.0" layoutY="239.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$200" textAlignment="CENTER">
+      <Button fx:id="btn01" layoutX="188.0" layoutY="239.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$200" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -114,7 +114,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn11" layoutX="323.0" layoutY="239.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="59.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$200" textAlignment="CENTER">
+      <Button fx:id="btn11" layoutX="323.0" layoutY="239.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="59.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$200" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -129,7 +129,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn21" layoutX="458.0" layoutY="239.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$200" textAlignment="CENTER">
+      <Button fx:id="btn21" layoutX="458.0" layoutY="239.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$200" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -144,7 +144,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn31" layoutX="588.0" layoutY="239.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$200" textAlignment="CENTER">
+      <Button fx:id="btn31" layoutX="588.0" layoutY="239.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$200" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -159,7 +159,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn41" layoutX="722.0" layoutY="239.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$200" textAlignment="CENTER">
+      <Button fx:id="btn41" layoutX="722.0" layoutY="239.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$200" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -174,7 +174,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn02" layoutX="188.0" layoutY="307.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$300" textAlignment="CENTER">
+      <Button fx:id="btn02" layoutX="188.0" layoutY="307.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$300" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -189,7 +189,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn12" layoutX="323.0" layoutY="307.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$300" textAlignment="CENTER">
+      <Button fx:id="btn12" layoutX="323.0" layoutY="307.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$300" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -204,7 +204,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn22" layoutX="454.0" layoutY="307.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$300" textAlignment="CENTER">
+      <Button fx:id="btn22" layoutX="454.0" layoutY="307.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$300" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -219,7 +219,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn32" layoutX="588.0" layoutY="304.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="75.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$300" textAlignment="CENTER">
+      <Button fx:id="btn32" layoutX="588.0" layoutY="304.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="75.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$300" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -234,7 +234,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn42" layoutX="722.0" layoutY="304.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="75.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$300" textAlignment="CENTER">
+      <Button fx:id="btn42" layoutX="722.0" layoutY="304.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="75.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$300" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -249,7 +249,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn03" layoutX="188.0" layoutY="373.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$400" textAlignment="CENTER">
+      <Button fx:id="btn03" layoutX="188.0" layoutY="373.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$400" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -264,7 +264,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn13" layoutX="323.0" layoutY="369.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$400" textAlignment="CENTER">
+      <Button fx:id="btn13" layoutX="323.0" layoutY="369.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$400" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -279,7 +279,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn23" layoutX="454.0" layoutY="369.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$400" textAlignment="CENTER">
+      <Button fx:id="btn23" layoutX="454.0" layoutY="369.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$400" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -294,7 +294,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn33" layoutX="588.0" layoutY="369.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$400" textAlignment="CENTER">
+      <Button fx:id="btn33" layoutX="588.0" layoutY="369.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$400" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -309,7 +309,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn43" layoutX="722.0" layoutY="366.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="75.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$400" textAlignment="CENTER">
+      <Button fx:id="btn43" layoutX="722.0" layoutY="366.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="75.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$400" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -324,7 +324,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn04" layoutX="188.0" layoutY="437.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$500" textAlignment="CENTER">
+      <Button fx:id="btn04" layoutX="188.0" layoutY="437.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$500" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -339,7 +339,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn14" layoutX="323.0" layoutY="435.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$500" textAlignment="CENTER">
+      <Button fx:id="btn14" layoutX="323.0" layoutY="435.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$500" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -354,7 +354,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn24" layoutX="453.0" layoutY="435.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$500" textAlignment="CENTER">
+      <Button fx:id="btn24" layoutX="453.0" layoutY="435.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="68.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$500" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -369,7 +369,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn34" layoutX="588.0" layoutY="430.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="75.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$500" textAlignment="CENTER">
+      <Button fx:id="btn34" layoutX="588.0" layoutY="430.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="75.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$500" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -384,7 +384,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn44" layoutX="722.0" layoutY="432.0" mnemonicParsing="false" onAction="#toQuestionScreen" prefHeight="75.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$500" textAlignment="CENTER">
+      <Button fx:id="btn44" layoutX="722.0" layoutY="432.0" mnemonicParsing="false" onAction="#toQuestionScreenHandler" prefHeight="75.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="\$500" textAlignment="CENTER">
          <font>
             <Font name="Impact" size="35.0" />
          </font>
@@ -477,7 +477,7 @@
             <Font name="Ink Free" size="33.0" />
          </font>
       </TextField>
-      <TextField fx:id="team1Score" alignment="CENTER" layoutX="101.0" layoutY="581.0" prefHeight="82.0" prefWidth="281.0" style="-fx-background-color: transparent; -fx-text-fill: white;">
+      <TextField fx:id="team1Score" alignment="CENTER" editable="false" layoutX="101.0" layoutY="581.0" prefHeight="82.0" prefWidth="281.0" style="-fx-background-color: transparent; -fx-text-fill: white;">
          <font>
             <Font name="Century Gothic Bold" size="42.0" />
          </font>
@@ -485,7 +485,7 @@
             <DropShadow blurType="ONE_PASS_BOX" offsetX="2.0" spread="0.63" />
          </effect>
       </TextField>
-      <TextField fx:id="team2Score" alignment="CENTER" layoutX="645.0" layoutY="581.0" prefHeight="82.0" prefWidth="281.0" style="-fx-background-color: transparent; -fx-text-fill: white;">
+      <TextField fx:id="team2Score" alignment="CENTER" editable="false" layoutX="645.0" layoutY="581.0" prefHeight="82.0" prefWidth="281.0" style="-fx-background-color: transparent; -fx-text-fill: white;">
          <font>
             <Font name="Century Gothic Bold" size="42.0" />
          </font>

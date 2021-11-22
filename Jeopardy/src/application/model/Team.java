@@ -26,9 +26,9 @@ public class Team
 		return score;
 	}
 
-	public void setScore(int score) 
+	public void updateScore(int score) 
 	{
-		this.score = score;
+		this.score += score;
 	}
 	
 	@Override
