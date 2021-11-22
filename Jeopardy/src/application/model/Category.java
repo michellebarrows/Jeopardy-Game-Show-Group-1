@@ -16,16 +16,8 @@ public class Category {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public ArrayList<Question> getQuestions() {
 		return questions;
-	}
-
-	public void setQuestions(ArrayList<Question> questions) {
-		this.questions = questions;
 	}
 	
 	public String toString() {

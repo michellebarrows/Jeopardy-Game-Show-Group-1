@@ -71,7 +71,7 @@ public class QuestionController
 		this.dollarAmount = dollarAmount;
 	}
 	
-	public void loadQuestion(Question q, ArrayList<String> hiddenButtons, String buttonId)
+	public void loadQuestion(Question q, ArrayList<String> hiddenButtons, String buttonFxId)
 	{
 		questionArea.setText(q.getQuestion());
 		optionA.setText(q.getOptionA());
@@ -85,7 +85,7 @@ public class QuestionController
 		}
 		
 		hiddenBtns = hiddenButtons;
-		hiddenBtns.add(buttonId);
+		hiddenBtns.add(buttonFxId);
 		
 		team1Id.setText(this.team1.getTeamName());
     	team2Id.setText(this.team2.getTeamName());
