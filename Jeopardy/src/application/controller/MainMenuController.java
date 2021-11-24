@@ -12,7 +12,19 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.scene.control.TextField;
 
-public class MainMenuController {
+/************************************************************************************
+ * CLASS: MainMenuController
+ * 
+ * Attributes:
+ *  - FXML attributes
+ *  
+ * Use:
+ *  Supplies the main logic and data storage for the main menu view (MainMenu.fxml)
+ *
+ ***********************************************************************************/
+
+public class MainMenuController 
+{
 
 	///////////////////////
 	/// FXML Variables ///
@@ -31,12 +43,17 @@ public class MainMenuController {
 	/// FXML Handlers ///
 	/////////////////////
     
+    //METHOD: handlePlay
+    //Input: An ActionEvent
+    //Output: None
+    //Use: Switches the view to the main game screen upon play button pressed
     @FXML
     void handlePlay(ActionEvent event) 
     {
     	Team team1 = null;
     	Team team2 = null;
     	
+    	//check if team names are valid
     	if((team1NameField.getText().length() > 0) && (team2NameField.getText().length() > 0))
     	{
     		team1 = new Team(team1NameField.getText());
@@ -49,11 +66,13 @@ public class MainMenuController {
     		return;
     	}
     	
+    	//switch to game view
 		try
 		{
 			FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("./application/view/JeopardyGame.fxml"));
 			mainPane = loader.load();
 			
+			//passing in new game data
 			JeopardyController control = loader.getController();
 			control.updateGame(team1, team2, null);
 			
@@ -70,16 +89,14 @@ public class MainMenuController {
 		}
     }
 
+    //METHOD: handleQuit
+    //Input: An ActionEvent
+    //Output: None
+    //Use: closes the program with no error message upon Quit button pressed
     @FXML
     void handleQuit(ActionEvent event) 
     {
     	System.exit(0);
-    }
-
-    @FXML
-    void handleScores(ActionEvent event) 
-    {
-
     }
 
 }

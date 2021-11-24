@@ -8,20 +8,38 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
+/***********************************************************
+ * CLASS: Jeopardy
+ * 
+ * Attributes: None
+ *  
+ * Use:
+ *  Provides helper functions for reading in question data 
+ *
+ **********************************************************/
+
 public class Jeopardy {
 	
-	//calls on readQuestionsFromFile to read a list of questions and returns a list of them
+	//METHOD: readQuestionData
+	//Input: None
+	//Output: an ArrayList of Category objects
+	//Use: calls on readQuestionsFromFile to read a list of questions and returns a list of them
 	public ArrayList<Category> readQuestionData(){
-		ArrayList<Category> categories = new ArrayList<>(); 
+		ArrayList<Category> categories = new ArrayList<>();
+		
 		categories.add(readQuestionsFromFile("animals.csv"));
 		categories.add(readQuestionsFromFile("history.csv"));
 		categories.add(readQuestionsFromFile("math.csv"));
 		categories.add(readQuestionsFromFile("tv.csv"));
 		categories.add(readQuestionsFromFile("games.csv"));
+		
 		return categories;
 	}
 
-	//
+	//METHOD: readQuestionsFromFile
+	//Input: A String representing a file to be read from
+	//Output: A new Category object containing its respective questions
+	//Use: reads from the given file to create a new Category containing Questions
 	private Category readQuestionsFromFile(String filename) {
 		ArrayList<Question> questions = new ArrayList<>();
 		Path pathToFile = Paths.get("src/application/data/"+filename);
@@ -48,7 +66,10 @@ public class Jeopardy {
 		return new Category(filename.substring(0,filename.length()-4),questions);
 	}
 
-	//creates a question based on attributes
+	//METHOD: createQuestion
+	//Input: a String of formatted question data
+	//Output: a new Question from parsed data
+	//Use: creates a question based on attributes
 	private Question createQuestion(String[] attributes) {
 		String question = attributes[0];
 		String optionA = attributes[1];

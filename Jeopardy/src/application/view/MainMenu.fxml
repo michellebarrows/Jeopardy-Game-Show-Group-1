@@ -32,23 +32,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="520.0" layoutY="681.0" mnemonicParsing="false" onAction="#handleQuit" prefHeight="22.0" prefWidth="159.0" style="-fx-background-color: slategrey; -fx-text-fill: black;" text="Quit" textFill="#27142c">
+      <Button layoutX="441.0" layoutY="676.0" mnemonicParsing="false" onAction="#handleQuit" prefHeight="22.0" prefWidth="159.0" style="-fx-background-color: slategrey; -fx-text-fill: black;" text="Quit" textFill="#27142c">
          <font>
             <Font name="Trebuchet MS Bold" size="23.0" />
          </font>
          <effect>
             <DropShadow />
-         </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <Button layoutX="349.0" layoutY="681.0" mnemonicParsing="false" onAction="#handleScores" style="-fx-background-color: slategrey; -fx-text-fill: black;" text="View Scores" textFill="#27142c">
-         <font>
-            <Font name="Trebuchet MS Bold" size="23.0" />
-         </font>
-         <effect>
-            <DropShadow height="75.225" radius="36.74625" width="73.76" />
          </effect>
          <cursor>
             <Cursor fx:constant="HAND" />
