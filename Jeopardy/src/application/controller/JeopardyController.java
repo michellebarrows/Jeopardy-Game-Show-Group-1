@@ -25,15 +25,25 @@ public class JeopardyController {
     ArrayList<String> hiddenBtns;
     Team team1;
     Team team2;
+    Team winner;
 	
+    public static final int NUM_BUTTONS = 25;
+    
+	///////////////////////
+	/// FXML Variables ///
+	/////////////////////
     @FXML
     private AnchorPane mainPane;
+    
+    // 1st number represents category number
+    // 2nd number represents question number
+                 /*Cat.0, Cat.1, Cat.2, Cat.3, Cat.4 */
     @FXML
     private Button btn00, btn01, btn02, btn03, btn04,
-    			   btn10, btn11, btn12, btn13, btn14,
-    			   btn20, btn21, btn22, btn23, btn24,
-    			   btn30, btn31, btn32, btn33, btn34,
-    			   btn40, btn41, btn42, btn43, btn44;
+    			   btn10, btn11, btn12, btn13, btn14, // Question 1
+    			   btn20, btn21, btn22, btn23, btn24, // Question 2
+    			   btn30, btn31, btn32, btn33, btn34, // Question 3
+    			   btn40, btn41, btn42, btn43, btn44; // Question 4
     @FXML
     private TextField category0, category1, 
     		category2, category3, category4;
@@ -41,6 +51,35 @@ public class JeopardyController {
     private TextField team1Name, team2Name;
     @FXML
     private TextField team1Score, team2Score;
+    
+    
+	//////////////////////
+	/// FXML Handlers ///
+	/////////////////////
+    
+    @FXML
+    void toQuestionScreenHandler(ActionEvent event) throws IOException
+    {
+    	URL url = new File("src/application/view/QuestionView.fxml").toURI().toURL();
+    	FXMLLoader loader = new FXMLLoader(url);
+    	AnchorPane qView = loader.load();
+    	QuestionController control = loader.getController();
+    	Button butt = (Button)event.getSource();
+    	String buttonFxId = butt.getId();
+    	int dollarAmount = getQuestion(buttonFxId).getDollarAmount();
+    	control.setGameInfo(team1, team2, dollarAmount);
+    	control.loadQuestion(getQuestion(buttonFxId), hiddenBtns, buttonFxId);
+    	Scene scene = new Scene(qView,1035,700);
+    	scene.getStylesheets().add(getClass().getResource("questions.css").toExternalForm());
+    	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+    	window.setResizable(false);
+    	window.setScene(scene);
+    	window.show();
+    }
+    
+	/////////////////////////
+	/// Loader Functions ///
+	///////////////////////
     
     public void initialize() 
     {   	
@@ -53,7 +92,7 @@ public class JeopardyController {
     	}
     }
     
-    public void setTeams(Team teamOne, Team teamTwo, ArrayList<String> btnList)
+    public void updateGame(Team teamOne, Team teamTwo, ArrayList<String> btnList)
     {
     	team1 = teamOne;
     	team2 = teamTwo;
@@ -72,28 +111,20 @@ public class JeopardyController {
     			btn.setDisable(true);
     			btn.setVisible(false);
     		}
+    		
+    		// end game if all buttons selected
+    		if (hiddenBtns.size() == NUM_BUTTONS)
+    		{
+    			winner = (team1.getScore() > team2.getScore()) ? team1 : team2;
+
+        		//todo: send to end screen with winning team
+        	}
     	}
     }
     
-    
-    @FXML
-    void toQuestionScreen(ActionEvent event) throws IOException
-    {
-    	URL url = new File("src/application/view/QuestionView.fxml").toURI().toURL();
-    	FXMLLoader loader = new FXMLLoader(url);
-    	AnchorPane qView = loader.load();
-    	QuestionController control = loader.getController();
-    	Button butt = (Button)event.getSource();
-    	String id = butt.getId();
-    	control.setTeams(team1, team2);
-    	control.loadQuestion(getQuestion(id), hiddenBtns, id);
-    	Scene scene = new Scene(qView,1035,700);
-    	scene.getStylesheets().add(getClass().getResource("questions.css").toExternalForm());
-    	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-    	window.setResizable(false);
-    	window.setScene(scene);
-    	window.show();
-    }
+	/////////////////////////
+	/// Helper Functions ///
+	///////////////////////
     
     public Question getQuestion(String buttonID)
     {
