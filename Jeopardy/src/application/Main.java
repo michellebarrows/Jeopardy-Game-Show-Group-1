@@ -6,6 +6,16 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.fxml.FXMLLoader;
 
+/**************************************************************
+ * CLASS: Main
+ * 
+ * Attributes:
+ *  - None
+ *  
+ * Use:
+ *  Launches JavaFX and loads the first Scene (MainMenu.fxml)
+ *
+ *************************************************************/
 
 public class Main extends Application {
 	@Override

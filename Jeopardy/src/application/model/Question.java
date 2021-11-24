@@ -1,5 +1,22 @@
 package application.model;
 
+/********************************************************************
+ * CLASS: Question
+ * 
+ * Attributes:
+ *  - A String representing the question body
+ *  - A String representing the first answer choice
+ *  - A String representing the second answer choice
+ *  - A String representing the third answer choice
+ *  - A String representing the fourth answer choice
+ *  - A String representing the correct answer choice (a, b, c, or d)
+ *  - An integer representing the dollar value of the question
+ *  
+ * Use:
+ *  Handles data storage and access for question data
+ *
+ ********************************************************************/
+
 public class Question {
 
 	private String question;
@@ -10,6 +27,7 @@ public class Question {
 	private String answer;
 	private int dollarAmount;
 	
+	//Constructor
 	public Question(String question, String optionA, String optionB, String optionC, String optionD, String answer,
 			int dollarAmount) {
 		super();
@@ -21,7 +39,11 @@ public class Question {
 		this.answer = answer;
 		this.dollarAmount = dollarAmount;
 	}
-
+	
+	//////////////////////////
+	/// GETTERS & SETTERS ///
+	////////////////////////
+	
 	public String getQuestion() {
 		return question;
 	}
@@ -78,6 +100,7 @@ public class Question {
 		this.dollarAmount = dollarAmount;
 	}
 	
+	//toString override
 	public String toString() {
 		String q = "Question: " + getQuestion() + "\n"
 				+ "A) " + getOptionA() + "\n"
