@@ -1,10 +1,15 @@
 README - Jeopardy Game Show CS3443 Group 1
 
+Team - The Javaverbity Jeopardists
+Team Members - Michelle
+	     - Fernando Ramirez
+	     - Kyle Pancamo
+
 Usage: 
 	1. Clone the repository using https://github.com/KylePancamo/Jeopardy-Game-Show-Group-1
 	2. Open the repository in a Java capable IDE
 		i. IDE should be compatible and a build path should be configured with JDK 1.8 and JavaFX 8.
-		ii. SceneBuilder configuration is 16.0.0
+		ii. SceneBuilder with configuration 16.0.0
 	3. Launch the program as a Java application
 
 Gameplay: 
