@@ -1,7 +1,7 @@
 README - Jeopardy Game Show CS3443 Group 1
 
 Team - The Javaverbity Jeopardists
-Team Members - Michelle
+Team Members - Michelle Barrows
 	     - Fernando Ramirez
 	     - Kyle Pancamo
 
