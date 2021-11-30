@@ -493,5 +493,21 @@
             <DropShadow blurType="ONE_PASS_BOX" offsetX="2.0" spread="0.63" />
          </effect>
       </TextField>
+      <ImageView fitHeight="52.0" fitWidth="128.0" layoutX="460.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/endButton.PNG" />
+         </image>
+      </ImageView>
+      <Button layoutX="461.0" layoutY="505.0" mnemonicParsing="false" onAction="#endGameHandler" prefHeight="52.0" prefWidth="121.0" style="-fx-background-color: transparent; -fx-text-fill: gold;" text="End Game!" textAlignment="CENTER">
+         <font>
+            <Font name="Impact" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
    </children>
 </AnchorPane>

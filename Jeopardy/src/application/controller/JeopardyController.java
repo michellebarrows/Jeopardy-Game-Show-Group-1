@@ -102,6 +102,25 @@ public class JeopardyController {
     	window.show();
     }
     
+    @FXML
+    void endGameHandler(ActionEvent event) throws IOException
+    {
+			//load FXML file
+	    	URL url = new File("src/application/view/EndGameScreen.fxml").toURI().toURL();
+	    	FXMLLoader loader = new FXMLLoader(url);
+	    	AnchorPane endScreen = loader.load();
+	    	EndGameController controller = loader.getController();
+	    	controller.updateWinningText(team1, team2);
+	    	
+	    	//load in new scene and set display
+	    	Scene scene = new Scene(endScreen,1035,578);
+	    	scene.getStylesheets().add(getClass().getResource("questions.css").toExternalForm());
+			Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+	    	window.setResizable(false);
+	    	window.setScene(scene);
+	    	window.show();
+    }
+    
 	/////////////////////////
 	/// Loader Functions ///
 	///////////////////////
@@ -151,14 +170,6 @@ public class JeopardyController {
     			btn.setDisable(true);
     			btn.setVisible(false);
     		}
-    		
-    		// end game if all buttons selected
-    		if (completedBtns.size() == NUM_BUTTONS)
-    		{
-    			winner = (team1.getScore() > team2.getScore()) ? team1 : team2;
-
-        		//todo: send to end screen with winning team
-        	}
     	}
     }
     
